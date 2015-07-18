@@ -8,6 +8,7 @@
 
 import WatchKit
 import Foundation
+import WatchConnectivity
 
 
 class InterfaceController: WKInterfaceController {
@@ -16,14 +17,17 @@ class InterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        NSLog("did wake up");
     }
 
     override func willActivate() {
+                NSLog("func willActivate");
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
 
     override func didDeactivate() {
+        NSLog("func didDeactivate");
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
